@@ -19,6 +19,7 @@ public class Financing {
 	}
 
 	public void setTotalAmount(Double totalAmount) {
+		validateFinancing(totalAmount, income, month);
 		this.totalAmount = totalAmount;
 	}
 
@@ -27,6 +28,7 @@ public class Financing {
 	}
 
 	public void setIncome(Double income) {
+		validateFinancing(totalAmount, income, month);
 		this.income = income;
 	}
 
@@ -35,6 +37,7 @@ public class Financing {
 	}
 
 	public void setMonth(Integer month) {
+		validateFinancing(totalAmount, income, month);
 		this.month = month;
 	}
 
@@ -46,7 +49,7 @@ public class Financing {
 
 	public double quota() {
 
-		return (entry() - totalAmount) / month;
+		return (totalAmount - entry()) / month;
 
 	}
 
