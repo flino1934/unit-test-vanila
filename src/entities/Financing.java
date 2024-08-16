@@ -14,10 +14,6 @@ public class Financing {
 
 	}
 
-	public Financing() {
-		// TODO Auto-generated constructor stub
-	}
-
 	public Double getTotalAmount() {
 		return totalAmount;
 	}
@@ -57,7 +53,7 @@ public class Financing {
 	private void validateFinancing(Double totalAmount, Double income, Integer month) {
 		// TODO Auto-generated method stub
 
-		//0.8 pois ja vai ser dado 20% de entrada.
+		// 0.8 pois ja vai ser dado 20% de entrada.
 		if (totalAmount * 0.8 / month > income / 2.0) {
 			throw new IllegalArgumentException("A parcela não pode ser maior que a metade da renda");
 		}
